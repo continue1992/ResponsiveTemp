@@ -1,0 +1,96 @@
+@charset "utf-8";
+@color-000:#000;
+@color-FFF:#FFF;
+@color-333:#333;
+@color-666:#666;
+@color-basic:#000;
+@color-hover:#F00;
+
+@font-12:12px;
+@font-14:14px;
+@font-16:16px;
+@font-22:22px;
+
+@basic-font:"微软雅黑","Arial","Helvetica", "sans-serif";
+@common-font:"Lantinghei SC","Helvetica Neue";
+@beauty-font:"PingHei","STHeiti SC","SimHei";
+
+@lineheight-22:22px;
+
+@main-width:980px;
+
+.fleft(){
+	float: left;
+};
+.fright(){
+	float: right;
+}
+.display-block(){
+	display: block;
+}
+.display-none(){
+	display: none;
+}
+.display-inlineblock(){
+	display: inline-block;;
+}
+.clear(){
+	clear: both;height:0; line-height:0; overflow:hidden; font-size:0;
+}
+.pr(){
+	position: relative;
+}
+.pa(){
+	position: absolute;
+}
+.margin-auto(@tb:0){
+	margin:@tb auto;
+}
+
+/*pc_public start*/
+
+body,ul,dl,dd,dt,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,img,td,div,input{margin:0;padding:0;}
+body{
+	font-family:@basic-font;
+	font-size:@font-12;
+	font-style: normal;
+	line-height: @lineheight-22;
+	font-weight: normal;
+	font-variant: normal;
+	color:@color-666;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+a{
+	outline-style:none;
+	text-decoration:none;
+	border:0px;
+	color:@color-333;
+}
+a:hover{
+	text-decoration:none;
+	color:@color-hover;
+}
+input,select,textarea{
+	font-size:@font-12;
+	font-family:Arial, Helvetica, sans-serif;
+	color:@color-666;
+	outline:none
+}
+input{
+	border:0
+}
+img{
+	border:0;
+}
+li{
+	list-style-type:none; vertical-align:0
+}
+
+/*public stop here*/
+.wrap{ 
+	width:@main-width;
+	.margin-auto();
+}

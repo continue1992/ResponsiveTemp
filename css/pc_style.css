@@ -1,0 +1,72 @@
+@charset "utf-8";
+/*pc_public start*/
+body,
+ul,
+dl,
+dd,
+dt,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+img,
+td,
+div,
+input {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑", "Arial", "Helvetica", "sans-serif";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 22px;
+  font-weight: normal;
+  font-variant: normal;
+  color: #666666;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  outline-style: none;
+  text-decoration: none;
+  border: 0px;
+  color: #333333;
+}
+a:hover {
+  text-decoration: none;
+  color: #ff0000;
+}
+input,
+select,
+textarea {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666666;
+  outline: none;
+}
+input {
+  border: 0;
+}
+img {
+  border: 0;
+}
+li {
+  list-style-type: none;
+  vertical-align: 0;
+}
+/*public stop here*/
+.wrap {
+  width: 980px;
+  margin: 0 auto;
+}

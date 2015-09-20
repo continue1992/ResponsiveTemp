@@ -1,0 +1,138 @@
+@charset "utf-8";
+@color-000:#000;
+@color-FFF:#FFF;
+@color-333:#333;
+@color-666:#666;
+@color-basic:#000;
+@color-hover:#F00;
+
+@font-12:1.2rem;
+@font-14:1.4rem;
+@font-16:1.6rem;
+@font-22:2.2rem;
+
+@font-bold:700;
+@font-normal:400;
+
+@basic-font:"Open Sans","Arial","Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei","SimSun","sans-serif";
+@common-font:"Lantinghei SC","Helvetica Neue";
+@beauty-font:"PingHei","STHeiti SC","SimHei";
+
+@lineheight-22:22px;
+
+@bg-basic:#f5f5f5;
+
+.fleft(){
+	float: left;
+};
+.fright(){
+	float: right;
+}
+.display-block(){
+	display: block;
+}
+.display-none(){
+	display: none;
+}
+.display-inlineblock(){
+	display: inline-block;;
+}
+.clear(){
+	clear: both;height:0; line-height:0; overflow:hidden; font-size:0;
+}
+.pr(){
+	position: relative;
+}
+.pa(){
+	position: absolute;
+}
+.margin-auto(@tb:0){
+	margin:@tb auto;
+}
+
+/*mobile_style start*/
+
+body,ul,dl,dd,dt,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,img,td,div,input{
+	-webkit-tap-highlight-color:transparent;
+	margin:0;padding:0;
+}
+html{
+	overflow-y: scroll;
+	-webkit-text-size-adjust: none; 
+	-ms-text-size-adjust: none; 
+	font-size:62.5%;/*字体大小更改*/
+	-webkit-overflow-scrolling: touch;
+}
+body{
+	font-family:"Open Sans","Arial","Hiragino Sans GB","Microsoft YaHei","微软雅黑","STHeiti","WenQuanYi Micro Hei","SimSun","sans-serif";
+	font-style: normal;
+	line-height: @lineheight-22;
+	font-weight: normal;
+	font-variant: normal;
+	color:@color-basic;
+	word-break: break-all;
+	word-wrap: break-word;
+	background-color:@bg-basic;
+}
+table{ 
+	border-collapse:collapse;
+	border-spacing:0;
+}
+a{ 
+	outline-style:none; 
+	color:@color-basic; 
+	text-decoration:none; 
+	border:0px;
+}
+input,select,textarea{
+	font-size:@font-14; 
+	font-family:@basic-font; 
+	color:@color-333;
+	outline:none;
+}
+img{
+	border:0;
+	display:block
+}
+li{
+	list-style-type:none;
+	vertical-align:0;
+}
+textarea{
+	resize: none;
+}
+.radius(@rd:5px){ 
+	-moz-border-radius: @rd; 
+	-webkit-border-radius: @rd; 
+	border-radius:@rd; 
+	overflow:hidden;
+}
+::-moz-selection{
+	background:transparent;
+	color:none;
+}
+::selection{
+	background:transparent;
+	color:none;
+}
+
+/*public stop here*/
+@media screen and (max-height: 980px) {
+	.wrap{ 
+		max-width:980px; 
+		width:100%; 
+		height:100%; 
+		margin:0 auto; 
+		font-weight:@font-normal;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.wrap{ 
+		max-width:640px; 
+		width:100%; 
+		height:100%; 
+		margin:0 auto; 
+		font-weight:@font-normal;
+	}
+}

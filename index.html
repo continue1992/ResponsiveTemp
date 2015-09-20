@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta content="chrome=1" http-equiv="X-UA-Compatible">
+	<title>ResponsiveTemp</title>
+	<script type="text/javascript">
+	var head_Node = document.getElementsByTagName('head')[0],
+		window_width = window.screen.width,
+	 	link_node = document.createElement('link');
+	 	link_node.setAttribute('rel','stylesheet');
+	 	link_node.setAttribute('type','text/css');
+	if(window_width>980){
+		link_node.href = 'css/pc_style.css';
+		}else{
+		link_node.href = 'css/mobile_style.css';
+		}
+	head_Node.appendChild(link_node);	
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="head">
+			
+		</div>
+		<div class="main">
+			
+		</div>
+		<div class="foot">
+			
+		</div>
+	</div>	
+</body>
+</html>
