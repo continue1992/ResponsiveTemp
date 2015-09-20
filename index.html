@@ -9,17 +9,17 @@
 	<meta content="chrome=1" http-equiv="X-UA-Compatible">
 	<title>ResponsiveTemp</title>
 	<script type="text/javascript">
-	var head_Node = document.getElementsByTagName('head')[0],
+	var head_node = document.getElementsByTagName('head')[0],/*创建节点*/
 		window_width = window.screen.width,
 	 	link_node = document.createElement('link');
 	 	link_node.setAttribute('rel','stylesheet');
 	 	link_node.setAttribute('type','text/css');
-	if(window_width>980){
+	if(window_width>980){/*判断窗口大小赋值不同的样式表路径*/
 		link_node.href = 'css/pc_style.css';
-		}else{
+	}else{
 		link_node.href = 'css/mobile_style.css';
-		}
-	head_Node.appendChild(link_node);	
+	}
+	head_node.appendChild(link_node);/*将样式表添加到页面*/
 	</script>
 </head>
 <body>
@@ -34,5 +34,6 @@
 			
 		</div>
 	</div>	
+	<script type="text/javascript" src="js/commonTemp.js"></script>
 </body>
 </html>
