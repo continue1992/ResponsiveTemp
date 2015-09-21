@@ -58,7 +58,7 @@ input,
 select,
 textarea {
   font-size: 1.4rem;
-  font-family: "Open Sans", "Arial", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", "SimSun", "sans-serif";
+  font-family: "Open Sans", "Arial", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", "SimSun", "sans-serif";
   color: #333333;
   outline: none;
 }
@@ -82,9 +82,10 @@ textarea {
   color: none;
 }
 /*public stop here*/
-@media screen and (max-width: 980px) {
+@media screen and (min-width: 641px) and (max-width: 980px) {
   .wrap {
     max-width: 980px;
+    min-width: 641px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -94,6 +95,7 @@ textarea {
 @media screen and (max-width: 640px) {
   .wrap {
     max-width: 640px;
+    min-width: 320px;
     width: 100%;
     height: 100%;
     margin: 0 auto;
