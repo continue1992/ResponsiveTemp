@@ -4,10 +4,13 @@
 @color-333:#333;
 @color-666:#666;
 @color-basic:#000;
-@color-hover:#F00;
+@color-a:#6d6d6d;
+@color-hover:#c3862e;
+@color-time:#9f9e9e;
 
 @font-12:12px;
 @font-14:14px;
+@font-15:15px;
 @font-16:16px;
 @font-22:22px;
 
@@ -17,7 +20,12 @@
 
 @lineheight-22:22px;
 
-@main-width:980px;
+@wrap-width:100%;
+@main-width:981px;
+@sidenav-width:229px;
+@main-content-width:752px;
+
+@bg-color:#f4f4f4;
 
 .fleft(){
 	float: left;
@@ -36,10 +44,6 @@
 }
 .clear(){
 	clear: both;
-	height:0; 
-	line-height:0; 
-	overflow:hidden; 
-	font-size:0;
 }
 .pr(){
 	position: relative;
@@ -49,6 +53,12 @@
 }
 .margin-auto(@tb:0){
 	margin:@tb auto;
+}
+.border-radius(@du:5px){
+	border-radius: @du;
+	-webkit-border-radius:@du;
+	-o-border-radius:@du;
+	overflow: hidden; 
 }
 
 /*pc_public start*/
@@ -62,6 +72,7 @@ body{
 	font-weight: normal;
 	font-variant: normal;
 	color:@color-666;
+	background-color: @bg-color;
 }
 table{
 	border-collapse:collapse;
@@ -71,7 +82,7 @@ a{
 	outline-style:none;
 	text-decoration:none;
 	border:0px;
-	color:@color-333;
+	color:@color-a;
 }
 a:hover{
 	text-decoration:none;
@@ -93,9 +104,191 @@ li{
 	list-style-type:none; 
 	vertical-align:0
 }
+.cleardiv{
+	clear: both;
+	line-height: 0;
+	height: 0;
+	font-size: 0;
+	overflow:hidden; 
+}
 
 /*public stop here*/
 .wrap{ 
-	width:@main-width;
+	width:@wrap-width;
 	.margin-auto();
+	
+}
+.head_title{
+	width:@main-width;
+	height:60px;
+	.margin-auto();
+	.clear();
+}
+.language_chose{
+	.fleft();
+	width:200px;
+	height:60px;
+	line-height: 60px;
+	a{
+		margin-right:10px;
+	}
+}
+.head_search{
+	.fright();
+	height:40px;
+	padding-top: 20px;
+	input{
+		width:124px;
+		height:20px;
+		padding-left: 5px;
+		border:1px solid #d2d2d2;
+	}
+}
+.head{
+	width:@main-width - 50px;
+	height:35px;
+	padding:24px 24px 21px 24px;
+	background-color:#FFF;
+	border: 1px solid #dbdbdb;
+	.margin-auto();
+	margin-bottom:8px;
+	.border-radius(3px);
+	.clear();
+	.logo{
+		width:204px;
+		height: 35px;
+		.fleft();
+		display: block;
+		img{
+			width:204px;
+			height: 35px;
+			display: block;
+		}
+	}
+	.head_nav{
+		height:35px;
+		line-height: 35px;
+		font-size: @font-15;
+		.fright();
+		.menu{
+			display: none;
+		}
+		ul li{
+			.fleft();
+			padding:0 15px;
+		}
+	}
+}
+.main{
+	width:@main-width;
+	background-color: #FFF;
+	.margin-auto();
+	.main_banner{
+		width:@main-width;
+		height:218px;
+		img{
+			width:@main-width;
+			height:218px;
+			display: block;
+		}
+	}
+	.main_sidenav{
+		width:@sidenav-width - 41px;
+		padding: 0 20px;
+		.fleft();
+		h3{
+			height: 50px;
+			line-height: 50px;
+			border-bottom:1px solid #dddddd;
+		}
+		ul{
+			
+			li{
+				border-bottom: 1px solid #dddddd;
+				height: 40px;
+				line-height: 40px;
+				font-size: @font-14;
+				a::before{
+					content: '>';
+					margin:0 15px;
+				}
+			}
+		}
+	}
+	.main_content{
+		width:@main-content-width - 80px;
+		padding: 0 40px;
+		border-left: 1px solid #dddddd;
+		.fright();
+		.bread_link{
+			height: 60px;
+			line-height: 60px;
+			text-align: right;
+			color:#9c9c9c;
+			font-size: @font-14;
+			a{
+				color:#9c9c9c;
+				margin: 0 5px;
+			}
+			a:hover{
+				color:@color-hover;
+			}
+		}
+		.main_h3{
+			height:40px;
+			line-height: 40px;
+			font-size: @font-15;
+			border-bottom: 1px solid #dddddd;
+		}
+		.content_list{
+			padding:20px;
+			ul li{
+				height:40px;
+				line-height: 40px;
+				font-size: @font-14;
+				border-bottom: 1px dashed #dddddd;
+				a{
+					.fleft();
+				}
+				span{
+					color:@color-time;
+					.fright();
+				}
+			}
+		}
+		.pages_break{
+			text-align: center;
+			padding:  40px 0;
+			a{
+				padding: 5px 10px;
+				font-size: @font-14;
+				border: 1px solid #e5e5e5;
+			}
+			a:hover{
+				color: #FFF;
+				background-color: #cc1b1b;
+			}
+		}
+	}
+}
+.foot{
+	width:@main-width - 40px;
+	padding: 0 20px;
+	font-size: @font-12;
+	height:80px;
+	line-height: 60px;
+	.margin-auto();
+	.left{
+		.fleft();
+		a{
+			margin-right: 10px;
+		}
+	}
+	.mid{
+		.fright();
+		margin-right:20px;
+	}
+	.right{
+		.fright();
+	}
 }

@@ -25,7 +25,7 @@ window.onload = function(){
 		}
 		
 		return retn.length==0 || retn[0] == parEle ? false:retn;
-	}// obj E
+	}// obj('.wrap').[0];
 
 	// class处理
 	var addClass =function(ele, className){
@@ -38,5 +38,18 @@ window.onload = function(){
 		 ele.className = ele.className.replace(new RegExp("\\s*\\b" + className + "\\b", "g"), "");
 	}
 
+	var hasClass = function(ele, className) {  
+    	return ele.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));  
+	} 
 
+	//write here
+	obj('.head_nav .menu')[0].onclick = function(){ //导航栏显示隐藏
+		var this_next = obj('.head_nav ul')[0];
+		if(hasClass(this_next,'show')){
+			removeClass(this_next,'show');
+		}else{
+			addClass(this_next,'show');
+		}
+		
+	}
 }

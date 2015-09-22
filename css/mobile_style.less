@@ -4,7 +4,7 @@
 @color-333:#333;
 @color-666:#666;
 @color-basic:#000;
-@color-hover:#F00;
+@color-a:#6d6d6d;
 
 @font-12:1.2rem;
 @font-14:1.4rem;
@@ -39,10 +39,6 @@
 }
 .clear(){
 	clear: both;
-	height:0; 
-	line-height:0; 
-	overflow:hidden; 
-	font-size:0;
 }
 .pr(){
 	position: relative;
@@ -84,7 +80,7 @@ table{
 }
 a{ 
 	outline-style:none; 
-	color:@color-basic; 
+	color:@color-a; 
 	text-decoration:none; 
 	border:0px;
 }
@@ -104,6 +100,13 @@ li{
 }
 textarea{
 	resize: none;
+}
+.cleardiv{
+	clear: both;
+	height:0; 
+	line-height:0; 
+	overflow:hidden; 
+	font-size:0;
 }
 .radius(@rd:5px){ 
 	-moz-border-radius: @rd; 
@@ -130,8 +133,78 @@ textarea{
 		margin:0 auto; 
 		font-weight:@font-normal;
 	}
+	.head_title{
+		padding: 0 10px;
+		height:40px;
+		line-height: 40px;
+		font-size: 1.4rem;
+		.clear();
+		.language_chose{
+			.fleft();
+			a{
+				margin-right:10px;
+			}
+		}
+		.head_search{
+			.fright();
+			input{
+				padding-left: 5px;
+			}
+		}
+	}
+	.head{
+		height: 40px;
+		padding:20px 10px; 
+		line-height: 40px;
+		background-color: #FFF;
+		border-bottom: 1px solid #dadada;
+		.logo{
+			width: 30%;
+			.fleft();
+			img{
+				width: 100%;
+				display: block;
+			}
+		}
+		.head_nav{
+			.pr();
+			.fright();
+			.menu{
+				width: 30px;
+				height: 30px;
+				background: url("../images/iconfont-menu.png") no-repeat;
+				background-size: 30px;
+			}
+			ul{
+				.pa();
+				width: 200px;
+				top: 61px;
+				right: -10px;
+				background-color: #FFF;
+				font-size: @font-14;
+				display: none;
+				li{
+					border-bottom: 1px solid #dddddd;
+					a{
+						padding-left: 10%;
+						height: 40px;
+						display: block;
+					}
+					a:active{
+						background-color: #f4f4f4;
+					}
+				}
+			}
+			ul.show{
+				display: block;
+			}
+		}
+	}
+	.main{
+		width: 100%;
+	}
 }
-
+/* Break */
 @media screen and (max-width: 640px) {
 	.wrap{ 
 		max-width:640px; 
