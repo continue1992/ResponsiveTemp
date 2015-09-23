@@ -22,6 +22,9 @@
 
 @bg-basic:#f5f5f5;
 
+@head-height:40px;
+@head-paddingtb:20px 10px;
+
 .fleft(){
 	float: left;
 };
@@ -153,9 +156,9 @@ textarea{
 		}
 	}
 	.head{
-		height: 40px;
-		padding:20px 10px; 
-		line-height: 40px;
+		height: @head-height;
+		padding:@head-paddingtb; 
+		line-height: @head-height;
 		background-color: #FFF;
 		border-bottom: 1px solid #dadada;
 		.logo{
@@ -178,7 +181,7 @@ textarea{
 			ul{
 				.pa();
 				width: 200px;
-				top: 61px;
+				top: @head-height + @head-paddingtb + 1px ;
 				right: -10px;
 				background-color: #FFF;
 				font-size: @font-14;
@@ -202,6 +205,12 @@ textarea{
 	}
 	.main{
 		width: 100%;
+		.main_banner{
+			width: 100%;
+			img{
+				width:100%;
+			}
+		}
 	}
 }
 /* Break */

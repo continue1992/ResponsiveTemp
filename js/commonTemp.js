@@ -1,4 +1,4 @@
-window.onload = function(){
+var TempRun = function(){
 	//简单模拟jquery选择器
 	var obj = function(str,parEle){ 
 		str = str.split(" ");
@@ -53,3 +53,4 @@ window.onload = function(){
 		
 	}
 }
+TempRun();
