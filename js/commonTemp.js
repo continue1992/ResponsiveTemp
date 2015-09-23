@@ -1,6 +1,6 @@
-var TempRun = function(){
+var Tools = {
 	//简单模拟jquery选择器
-	var find = function(str,parEle){ 
+	find : function(str,parEle){ 
 		str = str.split(" ");
 		var par = [];
 		parEle = parEle||document;
@@ -25,34 +25,29 @@ var TempRun = function(){
 		}
 		
 		return retn.length==0 || retn[0] == parEle ? false:retn;
-	}// obj('.wrap').[0];
+	},// obj('.wrap').[0];
 
 	// class处理
-	var addClass =function(ele, className){
+	addClass : function(ele, className){
 		 if (!ele || !className || (ele.className && ele.className.search(new RegExp("\\b" + className + "\\b")) != -1)) return;
 		 ele.className += (ele.className ? " " : "") + className;
-	}
+	},
 
-	var removeClass = function(ele, className){
+	removeClass : function(ele, className){
 		 if (!ele || !className || (ele.className && ele.className.search(new RegExp("\\b" + className + "\\b")) == -1)) return;
 		 ele.className = ele.className.replace(new RegExp("\\s*\\b" + className + "\\b", "g"), "");
-	}
+	},
 
-	var hasClass = function(ele, className) {  
+	hasClass : function(ele, className) {  
     	return ele.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));  
-	} 
-
-	//write here
-
-	find('.head_nav .menu')[0].onclick = function(){ //导航栏显示隐藏
-		var this_next = find('.head_nav ul')[0];
-		if(hasClass(this_next,'show')){
-			removeClass(this_next,'show');
-		}else{
-			addClass(this_next,'show');
-		}
-	}
-	
+	} 	
 	
 }
-TempRun();//执行
+	Tools.find('.head_nav .menu')[0].onclick = function(){ //导航栏显示隐藏
+		var this_next = Tools.find('.head_nav ul')[0];
+		if(Tools.hasClass(this_next,'show')){
+			Tools.removeClass(this_next,'show');
+		}else{
+			Tools.addClass(this_next,'show');
+		}
+	}
