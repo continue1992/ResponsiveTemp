@@ -43,11 +43,14 @@ var Tools = {
 	} 	
 	
 }
-	Tools.find('.head_nav .menu')[0].onclick = function(){ //导航栏显示隐藏
-		var this_next = Tools.find('.head_nav ul')[0];
-		if(Tools.hasClass(this_next,'show')){
-			Tools.removeClass(this_next,'show');
-		}else{
-			Tools.addClass(this_next,'show');
-		}
+
+//write here
+
+Tools.find('.head_nav .menu')[0].onclick = function(){ //导航栏显示隐藏
+	var this_next = Tools.find('.head_nav ul')[0];
+	if(Tools.hasClass(this_next,'show')){
+		Tools.removeClass(this_next,'show');
+	}else{
+		Tools.addClass(this_next,'show');
 	}
+}
