@@ -23,7 +23,9 @@
 @bg-basic:#f5f5f5;
 
 @head-height:40px;
-@head-paddingtb:20px 10px;
+@head-paddingtb:20px;
+
+@logo-pic:204px;
 
 .fleft(){
 	float: left;
@@ -51,6 +53,9 @@
 }
 .margin-auto(@tb:0){
 	margin:@tb auto;
+}
+.padding(@tblr:0 20px){
+	padding:@tblr;
 }
 
 /*mobile_style start*/
@@ -137,7 +142,7 @@ textarea{
 		font-weight:@font-normal;
 	}
 	.head_title{
-		padding: 0 10px;
+		.padding();
 		height:40px;
 		line-height: 40px;
 		font-size: 1.4rem;
@@ -162,7 +167,7 @@ textarea{
 		background-color: #FFF;
 		border-bottom: 1px solid #dadada;
 		.logo{
-			width: 30%;
+			width: @logo-pic;
 			.fleft();
 			img{
 				width: 100%;
@@ -181,11 +186,16 @@ textarea{
 			ul{
 				.pa();
 				width: 200px;
-				top: @head-height + @head-paddingtb + 1px ;
-				right: -10px;
+				top: 61px ;//这个地方只能手动修改
+				right: -20px;//这个地方只能手动修改
 				background-color: #FFF;
 				font-size: @font-14;
-				display: none;
+				height:0px;
+				overflow: hidden;
+				transition: all ease 0.5s;
+				-moz-transition: all ease 0.5s; /* Firefox 4 */
+				-webkit-transition: all ease 0.5s; /* Safari 和 Chrome */
+				-o-transition: all ease 0.5s; /* Opera */
 				li{
 					border-bottom: 1px solid #dddddd;
 					a{
@@ -199,17 +209,84 @@ textarea{
 				}
 			}
 			ul.show{
-				display: block;
+				height:287px; //这个高度是下拉菜单的高度，请自己计算填写
 			}
 		}
 	}
 	.main{
 		width: 100%;
+		background-color: #FFF;
 		.main_banner{
 			width: 100%;
 			img{
 				width:100%;
 			}
+		}
+		.main_sidenav{
+			.display-none();
+		}
+		.main_content{
+			.padding();
+			.bread_link{
+				height:40px;
+				line-height: 40px;
+				font-size: @font-14;
+				a{
+					margin:0 5px;
+				}
+			}
+			.main_h3{
+				height: 40px;
+				line-height: 40px;
+				font-size: @font-22;
+			}
+			.content_list{
+				font-size: @font-14;
+				ul li{
+					height:35px;
+					line-height: 35px;
+					border-bottom: 1px dashed #dddddd;
+					a{
+						.fleft();
+					}
+					a:active{
+						color:#c3862e;
+					}
+					span{
+						.fright();
+					}
+				}
+			}
+			.pages_break{
+				text-align: center;
+				.padding(40px 0);
+				a{
+					padding:5px 10px;
+					font-size: @font-14;
+					border: 1px solid #dddddd; 
+				}
+				a:active{
+					background-color: #cc1b1b;
+					color:#FFF;
+				}
+			}
+		}
+	}
+	.foot{
+		text-align: center;
+		font-size: @font-14;
+		line-height: 25px;
+		.padding(20px);
+		.left{
+			a{
+				margin:0 10px; 
+			}
+		}
+		.mid{
+
+		}
+		.right{
+
 		}
 	}
 }
@@ -222,5 +299,164 @@ textarea{
 		height:100%; 
 		margin:0 auto; 
 		font-weight:@font-normal;
+	}
+	.head_title{
+		.padding();
+		height:40px;
+		line-height: 40px;
+		font-size: 1.4rem;
+		.clear();
+		.language_chose{
+			.fleft();
+			a{
+				margin-right:10px;
+			}
+		}
+		.head_search{
+			.fright();
+			width: 40%;
+			input{
+				width: 100%;
+				max-width: 155px;
+				padding-left: 5px;
+				.fright();
+				margin-top: 10px;
+			}
+			select{
+				.display-none();
+			}
+		}
+	}
+	.head{
+		height: @head-height;
+		padding:@head-paddingtb; 
+		line-height: @head-height;
+		background-color: #FFF;
+		border-bottom: 1px solid #dadada;
+		.logo{
+			width: @logo-pic;
+			.fleft();
+			img{
+				width: 100%;
+				display: block;
+			}
+		}
+		.head_nav{
+			.pr();
+			.fright();
+			.menu{
+				width: 30px;
+				height: 30px;
+				background: url("../images/iconfont-menu.png") no-repeat;
+				background-size: 30px;
+			}
+			ul{
+				.pa();
+				width: 200px;
+				top: 61px ;//这个地方只能手动修改
+				right: -20px;//这个地方只能手动修改
+				background-color: #FFF;
+				font-size: @font-14;
+				height:0px;
+				overflow: hidden;
+				transition: all ease 0.5s;
+				-moz-transition: all ease 0.5s; /* Firefox 4 */
+				-webkit-transition: all ease 0.5s; /* Safari 和 Chrome */
+				-o-transition: all ease 0.5s; /* Opera */
+				li{
+					border-bottom: 1px solid #dddddd;
+					a{
+						padding-left: 10%;
+						height: 40px;
+						display: block;
+					}
+					a:active{
+						background-color: #f4f4f4;
+					}
+				}
+			}
+			ul.show{
+				height:287px; //这个高度是下拉菜单的高度，请自己计算填写
+			}
+		}
+	}
+	.main{
+		width: 100%;
+		background-color: #FFF;
+		.main_banner{
+			width: 100%;
+			img{
+				width:100%;
+			}
+		}
+		.main_sidenav{
+			.display-none();
+		}
+		.main_content{
+			.padding();
+			.bread_link{
+				height:40px;
+				line-height: 40px;
+				font-size: @font-14;
+				a{
+					margin:0 5px;
+				}
+			}
+			.main_h3{
+				height: 40px;
+				line-height: 40px;
+				font-size: @font-22;
+			}
+			.content_list{
+				font-size: @font-14;
+				ul li{
+					height:35px;
+					line-height: 35px;
+					border-bottom: 1px dashed #dddddd;
+					a{
+						.fleft();
+						width: 70%;
+						height: 35px;
+						overflow: hidden;
+					}
+					a:active{
+						color:#c3862e;
+					}
+					span{
+						.fright();
+					}
+				}
+			}
+			.pages_break{
+				text-align: center;
+				.padding(40px 0);
+				a{
+					padding:5px 10px;
+					font-size: @font-14;
+					border: 1px solid #dddddd; 
+				}
+				a:active{
+					background-color: #cc1b1b;
+					color:#FFF;
+				}
+			}
+		}
+	}
+	.foot{
+		text-align: center;
+		font-size: @font-14;
+		line-height: 25px;
+		.padding(20px);
+		.left{
+			a{
+				margin:0 10px; 
+			}
+		}
+		.mid{
+
+		}
+		.right{
+
+		}
 	}
 }
