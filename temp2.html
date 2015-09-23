@@ -10,7 +10,7 @@
 	<title>ResponsiveTemp</title>
 	<script type="text/javascript">
 	var head_node = document.getElementsByTagName('head')[0],/*创建节点*/
-		window_width = window.screen.width,
+		window_width = window.innerWidth,
 	 	link_node = document.createElement('link');
 	 	link_node.setAttribute('rel','stylesheet');
 	 	link_node.setAttribute('type','text/css');
@@ -21,7 +21,7 @@
 	}
 	head_node.appendChild(link_node);/*将样式表添加到页面*/
 	window.onresize = function(){//窗口缩放的时候重新创建样式表
-		window_width = window.screen.width;
+		window_width = window.innerWidth;
 		if(window_width>980){
 			link_node.href = 'css/pc_style.css';
 		}else{
