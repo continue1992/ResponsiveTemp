@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta content="chrome=1" http-equiv="X-UA-Compatible">
+	<title>ResponsiveTemp</title>
+	<script type="text/javascript">
+	var head_node = document.getElementsByTagName('head')[0],/*创建节点*/
+		window_width = window.screen.width,
+	 	link_node = document.createElement('link');
+	 	link_node.setAttribute('rel','stylesheet');
+	 	link_node.setAttribute('type','text/css');
+	if(window_width>980){/*判断窗口大小赋值不同的样式表路径*/
+		link_node.href = 'css/pc_style.css';
+	}else{
+		link_node.href = 'css/mobile_style.css';
+	}
+	head_node.appendChild(link_node);/*将样式表添加到页面*/
+	window.onresize = function(){//窗口缩放的时候重新创建样式表
+		window_width = window.screen.width;
+		if(window_width>980){
+			link_node.href = 'css/pc_style.css';
+		}else{
+			link_node.href = 'css/mobile_style.css';
+		}
+		head_node.removeChild(link_node);
+		head_node.appendChild(link_node);
+	}
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="head_title">
+			<div class="language_chose">
+				<a href="#">简体中文</a>
+				<a href="#">繁体</a>
+				<a href="#">English</a>
+			</div>
+			<div class="head_search">
+				<input type="text" placeholder="输入关键字" />
+				<select>
+					<option>农发行网站群</option>
+					<option>农发行事业群</option>
+				</select>
+			</div>
+		</div>
+		<div class="head">
+			<div class="logo">
+				<img src="./images/logo.jpg">
+			</div>
+			<div class="head_nav">
+				<div class="menu"></div>
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">农发行概况</a></li>
+					<li><a href="#">新闻与资讯</a></li>
+					<li><a href="#">业务概览</a></li>
+					<li><a href="#">企业文化</a></li>
+					<li><a href="#">社会责任</a></li>
+					<li><a href="#">客户服务</a></li>
+				</ul>
+			</div>
+			<div class="cleardiv"></div>
+		</div>
+		<div class="main">
+			<div class="main_banner">
+				<img src="./images/img/main_banner_02.jpg" /> 
+			</div>
+			<div class="main_sidenav">
+				<h3>新闻与资讯</h3>
+				<ul>
+					<li><a href="#">总行要闻</a></li>
+					<li><a href="#">通知公告</a></li>
+					<li><a href="#">分行动态</a></li>
+					<li><a href="#">组织结构</a></li>
+					<li><a href="#">图片新闻</a></li>
+					<li><a href="#">热点专题</a></li>
+					<li><a href="#">电子期刊</a></li>
+				</ul>
+			</div>
+			<div class="main_content big_bottom">
+				<div class="bread_link">
+					<span>当前位置:</span>
+					<a href="#">首页</a>
+					>
+					<a href="#">农发行概况</a>
+					>
+					<a href="#">分支机构</a>
+				</div>
+				<div class="main_h3 add_h3_border">
+					<div class="title">总行要闻</div>
+				</div>
+				<div class="news_detail_page">
+					<h3 class="h3_title">深化文化建设 促进改革发展 努力打造一流现代农业政策性银行</h3>
+					<div class="author_information">
+						<div class="one">来源：集团总公司</div>
+						<div class="one">作者：王红萍</div>
+						<div class="one last">发布时间：2013-04-20</div>
+						<div class="cleardiv"></div>
+					</div>
+					<div class="news_detail_area">
+						<p>2004年下半年以来，面对改革发展的繁重任务和严峻复杂的形势，我行深入贯彻落实科学发展观，坚持社会主义先进文化前进方向，站在打造现代银行、实现可持续发展的战略高度，坚持继承创新发展，主动倡导、统一部署，全面深入推进企业文化建设，确立了企业文化基本框架，我行价值理念深入人心，形象标识统一规范，员工面貌焕然一新，构建和谐成效显著，社会形象全面提升，为改革发展提供了强大精神力量和文化支撑。</p>
+						<p>（一）坚持运用战略思维，强化价值体系建设，充分发挥对我行改革发展的引领作用。本届党委成立之初，面对广大员工“红旗能打多久”的疑虑，按照国务院关于深化农发行改革的要求，致力于解决“建设什么样的农发行”“怎样建设农发行”这个根本问题，加强对全局性、长远性和规律性问题的谋划和推进。按照打造现代银行要求，适应支持农村改革发展需要，着力构建特色鲜明、内涵深刻的价值体系，确立了建设现代农业政策性银行的战略目标，指明我行前进的方向；确定了“中国农业发展银行，建设新农村的银行”的宣传语，生动昭示我行新时期的历史使命、职责定位和庄严承诺；精心提炼出“至诚服务、有效发展、以人为本、构建和谐”的核心理念，集中反映办好农发行的内在规律和理想追求。价值体系的确立，引领了改革发展，凝聚了奋斗力量。我们坚持解放思想、实事求是、与时俱进，转观念换思路，定规划抓实施，全面推进内部改革，现代银行框架体系初步建立。这种脱胎换骨的改造，使全行焕发出新的生机和活力。我们牢固树立全局观念，坚定不移地服从服务于党和国家事业大局，把贯彻落实中央政策放在首位，把服务“三农”作为立行之本，正确处理社会效益和经营效益、业务发展和风险防控关系，坚持执行政策、服务客户、自身发展相统一，坚持速度、结构、质量、效益相统一，充分调动和发挥全行员工的主动性、积极性、创造性，着力构建“风正、气顺、心齐、劲足、绩优”的和谐局面，使我行实现了内生性可持续发展，走上了良性的发展轨道。</p>
+						<p>（二）着力打造“建设新农村的银行”的品牌形象，推广应用视觉形象识别系统，我行社会知名度、美誉度和影响力全面提升。我们将产品、服务、舆论宣传等有机结合起来，协调一致，充分展示我行的办行理念、经营方式、支农成效、对外形象，把文化优势转化为品牌优势，树立了良好的整体形象。</p>
+					</div>
+				</div>
+			</div>
+			<div class="cleardiv"></div>
+		</div>
+		<div class="foot">
+			<div class="left">
+				<a href="#">网站地图</a>|
+				<a href="#">邮箱登录</a>|
+				<a href="#">联系我们</a>
+			</div>
+			<div class="right">
+				京ICP备05028200号　京公网安备110102002048号
+			</div>
+			<div class="mid">
+				Copyright © 2014 All rights reserved. 中国农业发展银行 版权所有
+			</div>
+			<div class="cleardiv"></div>
+		</div>
+	</div>	
+	<script type="text/javascript" src="js/commonTemp.js"></script>
+</body>
+</html>

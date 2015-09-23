@@ -60,7 +60,9 @@
 	-o-border-radius:@du;
 	overflow: hidden; 
 }
-
+.padding(@tb:0 20px){
+	padding:@tb;
+}
 /*pc_public start*/
 
 body,ul,dl,dd,dt,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,img,td,div,input{margin:0;padding:0;}
@@ -103,6 +105,12 @@ img{
 li{
 	list-style-type:none; 
 	vertical-align:0
+}
+.fleft{
+	float: left;
+}
+.fright{
+	float: right;
 }
 .cleardiv{
 	clear: both;
@@ -240,8 +248,18 @@ li{
 			font-size: @font-15;
 			border-bottom: 1px solid #dddddd;
 		}
+		.main_h3.add_h3_border{
+			.pr();
+			.title{
+				.pa();
+				.padding(0 10px);
+				top:-1px;
+				left: 0;
+				border-bottom: 2px solid #ae7b20;
+			}
+		}
 		.content_list{
-			padding:20px;
+			.padding(0 20px);
 			ul li{
 				height:40px;
 				line-height: 40px;
@@ -253,6 +271,92 @@ li{
 				span{
 					color:@color-time;
 					.fright();
+				}
+			}
+		}
+		.map_list_content{
+			font-size: @font-14;
+			.padding(10px 20px);
+			ul li{
+				line-height: 35px;
+				.title{
+					width:80px;
+					color: @color-333;
+					.fleft();
+				}
+				.content{
+					width:500px;
+					.fleft();
+					a{
+						margin:0 5px;
+						display: inline-block;
+					}
+				}
+			}		
+		}
+		.main_detail_content{
+			.padding(20px);
+			font-size: @font-14;
+			p{
+				text-indent: 24px;
+				.margin-auto(20px auto); 
+			}
+		}
+		.main_bottom_enter{
+			font-size: @font-14;
+			.padding(20px);
+			.public_bottom_enter{
+				width: 254px;
+				h3{
+					height: 40px;
+					line-height: 40px;
+					border-bottom: 1px solid #dddddd;
+				}
+				.img{
+					width: 218px;
+					height: 159px;
+					padding:2px;
+					border: 1px solid #dddddd;
+					margin: 0 auto;
+					margin-top: 20px;
+				}
+				.link{
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+				}
+			}
+		}
+		.news_detail_page{
+			.padding(20px);
+			.h3_title{
+				font-size: @font-16;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				color: @color-000;
+			}
+			.author_information{
+				height: 40px;
+				line-height: 40px;
+				border-bottom: 1px solid #dfdfdf;
+				.one{
+					width: 40%;
+					color:#a1a1a1;
+					.fleft();
+				}
+				.one.last{
+					width: 20%;
+					text-align: right;
+				}
+			}
+			.news_detail_area{
+				font-size: @font-14;
+				.padding(20px);
+				p{
+					margin-bottom: 20px;
+					text-indent: 24px;
+					color:#727272;
 				}
 			}
 		}
@@ -269,6 +373,9 @@ li{
 				background-color: #cc1b1b;
 			}
 		}
+	}
+	.main_content.big_bottom{
+		padding-bottom: 70px;
 	}
 }
 .foot{

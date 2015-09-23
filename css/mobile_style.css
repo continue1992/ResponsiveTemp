@@ -73,6 +73,12 @@ li {
 textarea {
   resize: none;
 }
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
 .cleardiv {
   clear: both;
   height: 0;
@@ -202,6 +208,16 @@ textarea {
     line-height: 40px;
     font-size: 2.2rem;
   }
+  .main .main_content .main_h3.add_h3_border {
+    position: relative;
+  }
+  .main .main_content .main_h3.add_h3_border .title {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border-bottom: 2px solid #ae7b20;
+    font-size: 1.6rem;
+  }
   .main .main_content .content_list {
     font-size: 1.4rem;
   }
@@ -218,6 +234,89 @@ textarea {
   }
   .main .main_content .content_list ul li span {
     float: right;
+  }
+  .main .main_content .map_list_content {
+    font-size: 1.4rem;
+    padding: 20px 0;
+  }
+  .main .main_content .map_list_content ul li {
+    line-height: 35px;
+  }
+  .main .main_content .map_list_content ul li .title {
+    width: 20%;
+    padding-right: 5%;
+    float: left;
+  }
+  .main .main_content .map_list_content ul li .content {
+    width: 75%;
+    float: left;
+  }
+  .main .main_content .map_list_content ul li .content a {
+    margin: 0 5px;
+    display: inline-block;
+  }
+  .main .main_content .main_detail_content {
+    padding: 20px;
+    font-size: 1.4rem;
+  }
+  .main .main_content .main_detail_content p {
+    text-indent: 24px;
+    margin: 20px auto auto;
+  }
+  .main .main_content .main_bottom_enter {
+    font-size: 1.4rem;
+    padding: 20px;
+  }
+  .main .main_content .main_bottom_enter .public_bottom_enter {
+    width: 254px;
+  }
+  .main .main_content .main_bottom_enter .public_bottom_enter h3 {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #dddddd;
+  }
+  .main .main_content .main_bottom_enter .public_bottom_enter .img {
+    width: 218px;
+    height: 159px;
+    padding: 2px;
+    border: 1px solid #dddddd;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .main .main_content .main_bottom_enter .public_bottom_enter .link {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .main .main_content .news_detail_page .h3_title {
+    font-size: 1.6rem;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    padding: 20px 0;
+  }
+  .main .main_content .news_detail_page .author_information {
+    font-size: 1.4rem;
+    line-height: 25px;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  .main .main_content .news_detail_page .author_information .one {
+    width: 40%;
+    color: #a1a1a1;
+    float: left;
+  }
+  .main .main_content .news_detail_page .author_information .one.last {
+    width: 20%;
+    text-align: right;
+  }
+  .main .main_content .news_detail_page .news_detail_area {
+    font-size: 1.4rem;
+    padding: 20px 0;
+  }
+  .main .main_content .news_detail_page .news_detail_area p {
+    margin-bottom: 20px;
+    text-indent: 24px;
+    color: #727272;
   }
   .main .main_content .pages_break {
     text-align: center;
@@ -364,6 +463,16 @@ textarea {
     line-height: 40px;
     font-size: 2.2rem;
   }
+  .main .main_content .main_h3.add_h3_border {
+    position: relative;
+  }
+  .main .main_content .main_h3.add_h3_border .title {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border-bottom: 2px solid #ae7b20;
+    font-size: 1.6rem;
+  }
   .main .main_content .content_list {
     font-size: 1.4rem;
   }
@@ -383,6 +492,92 @@ textarea {
   }
   .main .main_content .content_list ul li span {
     float: right;
+  }
+  .main .main_content .map_list_content {
+    font-size: 1.4rem;
+    padding: 20px 0;
+  }
+  .main .main_content .map_list_content ul li {
+    line-height: 35px;
+  }
+  .main .main_content .map_list_content ul li .title {
+    width: 20%;
+    padding-right: 5%;
+    float: left;
+  }
+  .main .main_content .map_list_content ul li .content {
+    width: 75%;
+    float: left;
+  }
+  .main .main_content .map_list_content ul li .content a {
+    margin: 0 5px;
+    display: inline-block;
+  }
+  .main .main_content .main_detail_content {
+    padding: 20px;
+    font-size: 1.4rem;
+  }
+  .main .main_content .main_detail_content p {
+    text-indent: 24px;
+    margin: 20px auto auto;
+  }
+  .main .main_content .main_bottom_enter {
+    font-size: 1.4rem;
+    padding: 20px;
+  }
+  .main .main_content .main_bottom_enter .public_bottom_enter {
+    margin: 0 auto;
+  }
+  .main .main_content .main_bottom_enter .public_bottom_enter h3 {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #dddddd;
+  }
+  .main .main_content .main_bottom_enter .public_bottom_enter .img {
+    width: 218px;
+    height: 159px;
+    padding: 2px;
+    border: 1px solid #dddddd;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .main .main_content .main_bottom_enter .public_bottom_enter .link {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .main .main_content .main_bottom_enter .public_bottom_enter.fright,
+  .main .main_content .main_bottom_enter .public_bottom_enter.fleft {
+    float: none!important;
+  }
+  .main .main_content .news_detail_page .h3_title {
+    font-size: 1.6rem;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    padding: 20px 0;
+  }
+  .main .main_content .news_detail_page .author_information {
+    font-size: 1.4rem;
+    line-height: 25px;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  .main .main_content .news_detail_page .author_information .one {
+    width: 100%;
+    color: #a1a1a1;
+  }
+  .main .main_content .news_detail_page .author_information .one.last {
+    width: 100%;
+    text-align: left;
+  }
+  .main .main_content .news_detail_page .news_detail_area {
+    font-size: 1.4rem;
+    padding: 20px 0;
+  }
+  .main .main_content .news_detail_page .news_detail_area p {
+    margin-bottom: 20px;
+    text-indent: 24px;
+    color: #727272;
   }
   .main .main_content .pages_break {
     text-align: center;
