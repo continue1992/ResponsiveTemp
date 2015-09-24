@@ -139,6 +139,165 @@ textarea{
 
 /*public stop here*/
 @media screen and(min-width:641px) and (max-width: 980px) {
+	/*时间轴*/
+
+	#timeline {
+		width: 100%;
+		overflow: hidden;
+		margin: 10px auto 0;
+		padding-bottom:30px;
+		position: relative;
+		background: url(../images/d_line.gif) no-repeat center 42px;
+	}
+	#dates {
+		height: 100px;
+		overflow: hidden;
+		margin:0 auto; 
+	}
+	#dates li {
+		list-style: none;
+		float: left;
+		width: 80px;
+		height: 70px;
+		font-size: 14px;
+		text-align: center;
+		background: url(../images/d_cur0.gif) center 34px no-repeat;
+	}
+	#dates a {
+		line-height: 38px;
+		height:60px;
+		display:block;
+	}
+	#dates .selected {
+		background: url(../images/d_cur.gif) center 34px no-repeat;
+	}
+	#dates .selected a {
+		font-size: 14px; 
+		color:#d71513; 
+		line-height:38px; 
+		font-weight:700;
+	}	
+	#issues {
+		width: 470px;
+		overflow: hidden; 
+		top:0px; 
+		position:relative;
+	}	
+	#issues li {
+		padding-top:30px;
+		float: left; 
+		position:relative;
+		overflow: hidden;
+	}
+	.img_n{ 
+		width:320px; 
+		margin:0 auto; 
+		padding:15px; 
+		display:block;
+	}
+	.img_n_p{
+		filter:alpha(opacity=70); 
+		opacity: 0.7;
+	}	
+	#grad_left,
+	#grad_right {
+		width: 100px;
+		height: 350px;
+		position: absolute;
+		top: 0; 
+		display:none;
+	}
+	#grad_left {
+		left: 0;
+		background: url('../images/grad_left.png') repeat-y;
+	}
+	#grad_right {
+		right: 0;
+		background: url('../images/grad_right.png') repeat-y;
+	}		
+	#next,
+	#prev {
+		position: absolute;
+		top: 0;
+		font-size: 70px;
+		top: 30px;
+		width: 32px;
+		height: 32px;
+		text-indent: -9999px;
+		overflow: hidden;
+	}
+	#next {
+		right: 0px;
+		background:#fff url(../images/next_time.jpg) no-repeat right center;
+	}
+	#prev {
+		left: 0px;
+		background:#fff url(../images/prev_time.jpg) no-repeat left center;
+	}
+	#prev:hover{
+		background:#fff url(../images/prev_red.jpg) no-repeat left center;
+	}
+	#next:hover{
+		background:#fff url(../images/next_red.jpg) no-repeat right center;
+	}
+	.phover{
+		background:#fff url('../images/d_left.gif') no-repeat left center!important;
+		opacity: 0.2;
+	}
+	.nhover{
+		background:#fff url('../images/d_right.gif') no-repeat right center!important;
+		opacity: 0.2;
+	}
+	#next.disabled,
+	#prev.disabled {
+		opacity: 0.2;
+	}
+	.ul_hid{
+		width:70%; 
+		overflow:hidden; 
+		margin:0 auto;
+	}
+	.is_ul{ 
+		width:100%;
+	}
+	.dsj_one{ 
+		font-size: @font-14;
+		background-color:#f1f1f1; 
+		padding:20px; 
+		border-radius:5px; 
+		margin-bottom:30px; 
+		position:relative;
+	}
+	.dsj_one.fen{ 
+		background-color:#f4edeb;
+	}
+	.dsj_tb{ 
+		width:14px; 
+		height:14px; 
+		background:url(../images/dsj_tb.gif) no-repeat; 
+		position:absolute; 
+		left:-30px; 
+		top:20px;
+	}
+	.dsj_one h3{ 
+		color:#3a3a3a; 
+		margin-bottom: 10px;
+		font-size:@font-22; 
+		font-weight:400;
+	}
+	.lanjiao{ 
+		width:7px; 
+		height:12px; 
+		background:url(../images/lan_jiao.gif) no-repeat; 
+		position:absolute; 
+		left:-7px; 
+		top:20px;
+	}
+	.lanjiao.fen{ 
+		background:url(../images/fenjiao.gif) no-repeat;
+	}
+	/*end*/
+
 	.wrap{ 
 		max-width:980px; 
 		min-width: 641px;
@@ -393,6 +552,165 @@ textarea{
 }
 /* Break */
 @media screen and (max-width: 640px) {
+	/*时间轴*/
+
+	#timeline {
+		width: 100%;
+		overflow: hidden;
+		margin: 10px auto 0;
+		padding-bottom:30px;
+		position: relative;
+		background: url(../images/d_line.gif) no-repeat center 42px;
+	}
+	#dates {
+		height: 100px;
+		overflow: hidden;
+		margin:0 auto; 
+	}
+	#dates li {
+		list-style: none;
+		float: left;
+		width: 80px;
+		height: 70px;
+		font-size: 14px;
+		text-align: center;
+		background: url(../images/d_cur0.gif) center 34px no-repeat;
+	}
+	#dates a {
+		line-height: 38px;
+		height:60px;
+		display:block;
+	}
+	#dates .selected {
+		background: url(../images/d_cur.gif) center 34px no-repeat;
+	}
+	#dates .selected a {
+		font-size: 14px; 
+		color:#d71513; 
+		line-height:38px; 
+		font-weight:700;
+	}	
+	#issues {
+		width: 470px;
+		overflow: hidden; 
+		top:0px; 
+		position:relative;
+	}	
+	#issues li {
+		padding-top:30px;
+		float: left; 
+		position:relative;
+		overflow: hidden;
+	}
+	.img_n{ 
+		width:320px; 
+		margin:0 auto; 
+		padding:15px; 
+		display:block;
+	}
+	.img_n_p{
+		filter:alpha(opacity=70); 
+		opacity: 0.7;
+	}	
+	#grad_left,
+	#grad_right {
+		width: 100px;
+		height: 350px;
+		position: absolute;
+		top: 0; 
+		display:none;
+	}
+	#grad_left {
+		left: 0;
+		background: url('../images/grad_left.png') repeat-y;
+	}
+	#grad_right {
+		right: 0;
+		background: url('../images/grad_right.png') repeat-y;
+	}		
+	#next,
+	#prev {
+		position: absolute;
+		top: 0;
+		font-size: 70px;
+		top: 30px;
+		width: 32px;
+		height: 32px;
+		text-indent: -9999px;
+		overflow: hidden;
+	}
+	#next {
+		right: 0px;
+		background:#fff url(../images/next_time.jpg) no-repeat right center;
+	}
+	#prev {
+		left: 0px;
+		background:#fff url(../images/prev_time.jpg) no-repeat left center;
+	}
+	#prev:hover{
+		background:#fff url(../images/prev_red.jpg) no-repeat left center;
+	}
+	#next:hover{
+		background:#fff url(../images/next_red.jpg) no-repeat right center;
+	}
+	.phover{
+		background:#fff url('../images/d_left.gif') no-repeat left center!important;
+		opacity: 0.2;
+	}
+	.nhover{
+		background:#fff url('../images/d_right.gif') no-repeat right center!important;
+		opacity: 0.2;
+	}
+	#next.disabled,
+	#prev.disabled {
+		opacity: 0.2;
+	}
+	.ul_hid{
+		width:70%; 
+		overflow:hidden; 
+		margin:0 auto;
+	}
+	.is_ul{ 
+		width:100%;
+	}
+	.dsj_one{ 
+		font-size: @font-14;
+		background-color:#f1f1f1; 
+		padding:20px; 
+		border-radius:5px; 
+		margin-bottom:30px; 
+		position:relative;
+		width:88%;
+	}
+	.dsj_one.fen{ 
+		background-color:#f4edeb;
+	}
+	.dsj_tb{ 
+		width:14px; 
+		height:14px; 
+		background:url(../images/dsj_tb.gif) no-repeat; 
+		position:absolute; 
+		left:-30px; 
+		top:20px;
+	}
+	.dsj_one h3{ 
+		color:#3a3a3a; 
+		margin-bottom: 10px;
+		font-size:@font-22; 
+		font-weight:400;
+	}
+	.lanjiao{ 
+		width:7px; 
+		height:12px; 
+		background:url(../images/lan_jiao.gif) no-repeat; 
+		position:absolute; 
+		left:-7px; 
+		top:20px;
+	}
+	.lanjiao.fen{ 
+		background:url(../images/fenjiao.gif) no-repeat;
+	}
+
 	.wrap{ 
 		max-width:640px; 
 		min-width:320px;

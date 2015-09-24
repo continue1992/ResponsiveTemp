@@ -1,56 +1,41 @@
-var Tools = {
-	//简单模拟jquery选择器
-	find : function(str,parEle){ 
-		str = str.split(" ");
-		var par = [];
-		parEle = parEle||document;
-		var retn = [ parEle ] ;
-		for( var i in str ){ if(str[i].length!=0) par.push(str[i]) } //去掉重复空格
-		for( var i in par ){ 
-			if( retn.length==0 ) return false;
-			var _retn = [];
-			for ( var r in retn )
-			{
-				if( par[i][0] =="#" ) _retn.push( document.getElementById( par[i].replace("#","") ) );
-				else if( par[i][0] =="." ){
-					var tag = retn[r].getElementsByTagName('*');
-					for( var j=0; j<tag.length; j++ ){
-						var cln = tag[j].className;
-						if( cln && cln.search(new RegExp("\\b" + par[i].replace(".","") + "\\b"))!=-1 ){ _retn.push( tag[j] ); }
-					}
+$(function(){
+	var Methods = {
+		sideNav : function(obj,classname){ //用于侧栏导航，菜单等 Methods.sideNav('.menu','show');
+			var _this = $(obj);
+			var _list = _this.next('ul');
+			_this.click(function(){
+				if(!_list.hasClass(classname)){
+					_list.addClass(classname);
+				}else{
+					_list.removeClass(classname);
 				}
-				else { var tag = retn[r].getElementsByTagName( par[i] ); for( var j=0; j<tag.length; j++ ){ _retn.push( tag[j] ) } }
-			}
-			retn =_retn;
+			})
+		},
+		simpleTab : function(obj,bd,classname){ //简单选项卡切换 Methods.simpleTab('.hd ul li','.bd ul li','on');
+			var _this = $(obj);
+			var _bd = $(bd);
+			_this.click(function(){
+				_this.siblings().removeClass(classname);
+				$(this).addClass(classname);
+				_bd.hide().eq($(this).index()).show();
+			})
+		},
+		timeliner : function(){ //时间轴
+			var window_width = $(window).width();
+			$('#issues li').css('width',window_width * 0.94);
+			$().timelinr({
+				autoPlay: 'true',
+				autoPlayDirection: 'forward',
+				startAt: 1
+			})
+			$(window).resize(function(){
+				window_width = $(window).width();
+				$('#issues li').css('width',window_width * 0.94);
+			})	
 		}
-		
-		return retn.length==0 || retn[0] == parEle ? false:retn;
-	},// obj('.wrap').[0];
-
-	// class处理
-	addClass : function(ele, className){
-		 if (!ele || !className || (ele.className && ele.className.search(new RegExp("\\b" + className + "\\b")) != -1)) return;
-		 ele.className += (ele.className ? " " : "") + className;
-	},
-
-	removeClass : function(ele, className){
-		 if (!ele || !className || (ele.className && ele.className.search(new RegExp("\\b" + className + "\\b")) == -1)) return;
-		 ele.className = ele.className.replace(new RegExp("\\s*\\b" + className + "\\b", "g"), "");
-	},
-
-	hasClass : function(ele, className) {  
-    	return ele.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));  
-	} 	
-	
-}
-
-//write here
-
-Tools.find('.head_nav .menu')[0].onclick = function(){ //导航栏显示隐藏
-	var this_next = Tools.find('.head_nav ul')[0];
-	if(Tools.hasClass(this_next,'show')){
-		Tools.removeClass(this_next,'show');
-	}else{
-		Tools.addClass(this_next,'show');
 	}
-}
+
+	Methods.sideNav('.menu','show');
+	Methods.timeliner();
+	
+})
