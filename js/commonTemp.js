@@ -36,6 +36,7 @@ $(function(){
 	}
 
 	Methods.sideNav('.menu','show');
+	Methods.simpleTab('.p_l_l_hd ul li','.p_l_l_bd ul li','on');
 	Methods.timeliner();
 	
 })
