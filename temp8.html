@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta content="chrome=1" http-equiv="X-UA-Compatible">
+	<title>ResponsiveTemp</title>
+	<script type="text/javascript">
+	var head_node = document.getElementsByTagName('head')[0],/*创建节点*/
+		window_width = window.innerWidth,
+	 	link_node = document.createElement('link');
+	 	link_node.setAttribute('rel','stylesheet');
+	 	link_node.setAttribute('type','text/css');
+	if(window_width>980){/*判断窗口大小赋值不同的样式表路径*/
+		link_node.href = 'css/pc_style.css';
+	}else{
+		link_node.href = 'css/mobile_style.css';
+	}
+	head_node.appendChild(link_node);/*将样式表添加到页面*/
+	window.onresize = function(){//窗口缩放的时候重新创建样式表
+		window_width = window.innerWidth;
+		if(window_width>980){
+			link_node.href = 'css/pc_style.css';
+		}else{
+			link_node.href = 'css/mobile_style.css';
+		}
+		head_node.removeChild(link_node);
+		head_node.appendChild(link_node);
+	}
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="head_title">
+			<div class="language_chose">
+				<a href="#">简体中文</a>
+				<a href="#">繁体</a>
+				<a href="#">English</a>
+			</div>
+			<div class="head_search">
+				<input type="text" placeholder="输入关键字" />
+				<select>
+					<option>农发行网站群</option>
+					<option>农发行事业群</option>
+				</select>
+			</div>
+		</div>
+		<div class="head">
+			<div class="logo">
+				<img src="./images/logo.jpg">
+			</div>
+			<div class="head_nav">
+				<div class="menu"></div>
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">农发行概况</a></li>
+					<li><a href="#">新闻与资讯</a></li>
+					<li><a href="#">业务概览</a></li>
+					<li><a href="#">企业文化</a></li>
+					<li><a href="#">社会责任</a></li>
+					<li><a href="#">客户服务</a></li>
+				</ul>
+			</div>
+			<div class="cleardiv"></div>
+		</div>
+		<div class="main">
+			<div class="main_banner">
+				<picture>
+    				<source media="(max-width:640px)" srcset="./images/img/main_banner_03_small.jpg" />
+    				<img src="./images/img/main_banner_03.jpg" />
+				</picture> 
+			</div>
+			<div class="main_sidenav">
+				<h3>客户服务</h3>
+				<ul>
+					<li><a href="#">形象理念</a></li>
+					<li><a href="#">文化建设</a></li>
+					<li><a href="#">党团工作</a></li>
+					<li><a href="#">模范人物</a></li>
+					<li><a href="#">员工风采</a></li>
+				</ul>
+			</div>
+			<div class="main_content big_bottom">
+				<div class="bread_link">
+					<span>当前位置:</span>
+					<a href="#">首页</a>
+					>
+					<a href="#">客户服务</a>
+					>
+					<a href="#">下载中心</a>
+				</div>
+				<div class="main_h3 add_h3_border">
+					<div class="title">模范人物</div>
+				</div>
+				<div class="public_picture_list">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="./images/img/picture_list_01.jpg" />
+								<p>足球联赛</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/img/picture_list_02.jpg" />
+								<p>篮球联赛</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/img/picture_list_03.jpg" />
+								<p>节日晚会</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/img/picture_list_04.jpg" />
+								<p>户外拓展</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/img/picture_list_05.jpg" />
+								<p>篮球联赛</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/img/picture_list_06.jpg" />
+								<p>健美操比赛</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="pages_break">
+					<a href="#"><</a>
+					<a href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">></a>
+				</div>
+			</div>
+			<div class="cleardiv"></div>
+		</div>
+		<div class="foot">
+			<div class="left">
+				<a href="#">网站地图</a>|
+				<a href="#">邮箱登录</a>|
+				<a href="#">联系我们</a>
+			</div>
+			<div class="right">
+				京ICP备05028200号　京公网安备110102002048号
+			</div>
+			<div class="mid">
+				Copyright © 2014 All rights reserved. 中国农业发展银行 版权所有
+			</div>
+			<div class="cleardiv"></div>
+		</div>
+	</div>	
+	<script type="text/javascript" src='js/jquery-1.8.3.min.js'></script>
+	<script type="text/javascript" src="js/commonTemp.js"></script>
+</body>
+</html>

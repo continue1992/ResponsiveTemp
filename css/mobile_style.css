@@ -579,6 +579,79 @@ textarea {
   .main .main_content .proud_leader_list .p_l_l_bd ul li .p_l_l_onebox img {
     width: 100%;
   }
+  .main .main_content .public_picture_list {
+    width: 639px;
+    margin: 0 auto;
+    padding-top: 40px;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .main .main_content .public_picture_list ul {
+    width: 700px;
+  }
+  .main .main_content .public_picture_list ul li {
+    margin-right: 11px;
+    margin-bottom: 20px;
+    float: left;
+  }
+  .main .main_content .public_picture_list ul li img {
+    width: 199px;
+    height: 147px;
+    border: 1px solid #dadada;
+    padding: 2px;
+    display: block;
+  }
+  .main .main_content .public_picture_list ul li p {
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.4rem;
+  }
+  .main .main_content .public_slide_leftLoop {
+    border-top: 1px solid #dddddd;
+    padding: 5%;
+    position: relative;
+  }
+  .main .main_content .public_slide_leftLoop .prev,
+  .main .main_content .public_slide_leftLoop .next {
+    width: 14px;
+    height: 33px;
+    display: block;
+    top: 100px;
+    position: absolute;
+  }
+  .main .main_content .public_slide_leftLoop .prev {
+    left: 0;
+    background: url(../images/prev_btn_0.gif) no-repeat;
+  }
+  .main .main_content .public_slide_leftLoop .prev:hover {
+    background: url(../images/prev_btn_1.gif) no-repeat;
+  }
+  .main .main_content .public_slide_leftLoop .next {
+    right: 0;
+    background: url(../images/next_btn_0.gif) no-repeat;
+  }
+  .main .main_content .public_slide_leftLoop .next:hover {
+    background: url(../images/next_btn_1.gif) no-repeat;
+  }
+  .main .main_content .public_slide_leftLoop .bd {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .main .main_content .public_slide_leftLoop .bd ul li {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-right: 27px;
+    float: left;
+  }
+  .main .main_content .public_slide_leftLoop .bd ul li img {
+    width: 153px;
+    display: block;
+    border: 1px solid #cecece;
+    padding: 2px;
+  }
+  .main .main_content .public_slide_leftLoop .bd ul li p {
+    line-height: 35px;
+  }
   .main .main_content .pages_break {
     text-align: center;
     padding: 40px 0;
@@ -1095,6 +1168,74 @@ textarea {
   }
   .main .main_content .proud_leader_list .p_l_l_bd ul li .p_l_l_onebox img {
     width: 100%;
+  }
+  .main .main_content .public_picture_list {
+    width: 100%;
+    padding-top: 40px;
+    overflow: hidden;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .main .main_content .public_picture_list ul li {
+    width: 100%;
+    float: left;
+  }
+  .main .main_content .public_picture_list ul li img {
+    width: 100%;
+    display: block;
+  }
+  .main .main_content .public_picture_list ul li p {
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.4rem;
+  }
+  .main .main_content .public_slide_leftLoop {
+    border-top: 1px solid #dddddd;
+    padding: 30px 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .main .main_content .public_slide_leftLoop .hd {
+    position: absolute;
+    height: 28px;
+    line-height: 28px;
+    bottom: 70px;
+    width: 100%;
+    margin-right: 0 auto;
+    text-align: right;
+    right: 5%;
+    z-index: 1;
+  }
+  .main .main_content .public_slide_leftLoop .hd li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #FFF;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin: 0 6px;
+  }
+  .main .main_content .public_slide_leftLoop .hd li.on {
+    background: #f00;
+  }
+  .main .main_content .public_slide_leftLoop .bd {
+    position: relative;
+    z-index: 0;
+  }
+  .main .main_content .public_slide_leftLoop .bd li {
+    position: relative;
+  }
+  .main .main_content .public_slide_leftLoop .bd li img {
+    width: 100%;
+    display: block;
+  }
+  .main .main_content .public_slide_leftLoop .bd li p {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 35px;
   }
   .main .main_content .pages_break {
     text-align: center;
